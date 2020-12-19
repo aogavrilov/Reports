@@ -16,7 +16,7 @@ public:
     Task* CreateTask();
     Task* EditTaskStatus();
     vector<Task*> WorkerTasks();
-
+    Task* FindTask();
 
 };
 

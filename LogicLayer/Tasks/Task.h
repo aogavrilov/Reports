@@ -12,21 +12,23 @@
 using namespace std;
 
 class Task {
-    int id;
-    string name;
+
     string description;
     Worker* worker;
     TaskStatus statusOfProcessing;
     vector<Comment*> comments;
     string dateOfEditing;
-    string dateOfCreating;
 
 
 public:
+    int id;
+    string name;
     Task(string name, string description, Worker* worker) : name(name), description(description),
         worker(worker), dateOfCreating(GetTime()){};
     Comment* AddComment(Worker* worker, string comment);
     void ChangeStatusOfProcessing(TaskStatus statusOfProcessing);
+
+    string dateOfCreating;
 };
 
 

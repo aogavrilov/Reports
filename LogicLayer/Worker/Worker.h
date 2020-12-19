@@ -7,8 +7,9 @@
 
 #include <string>
 #include <vector>
-using namespace std;
 
+using namespace std;
+#include "../Report/DailyReport.h"
 class Worker {
     string name;
     Worker* boss;
@@ -17,7 +18,7 @@ public:
     Worker(string name) : name(name){};
     Worker* SetBoss(Worker* boss);
     Worker* SetSubordinates(vector<Worker*> subordinates);
-
+    DailyReport* report = new DailyReport();
 };
 
 
