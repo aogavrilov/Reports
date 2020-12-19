@@ -3,4 +3,4 @@ project(Reports)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Reports InterfaceLayer/main.cpp LogicLayer/Worker/BaseWorker.cpp LogicLayer/Worker/BaseWorker.h LogicLayer/Worker/CompanyWorkers.cpp LogicLayer/Worker/CompanyWorkers.h)
+add_executable(Reports InterfaceLayer/main.cpp LogicLayer/Worker/Worker.cpp LogicLayer/Worker/Worker.h LogicLayer/Worker/CompanyWorkers.cpp LogicLayer/Worker/CompanyWorkers.h LogicLayer/Tasks/Task.cpp LogicLayer/Tasks/Task.h LogicLayer/Tasks/TasksSystem.cpp LogicLayer/Tasks/TasksSystem.h LogicLayer/Report/BaseReport.cpp LogicLayer/Report/BaseReport.h LogicLayer/Report/DailyReport.cpp LogicLayer/Report/DailyReport.h LogicLayer/Report/SprintsReport.cpp LogicLayer/Report/SprintsReport.h LogicLayer/Tasks/Comment.cpp LogicLayer/Tasks/Comment.h)
