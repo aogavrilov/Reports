@@ -8,11 +8,13 @@
 
 #include "BaseRule.h"
 
-class ByID : BaseRule{
+class ByID : public BaseRule{
 
-    int id;
-    ByID(vector<Task*> tasks, int id) : BaseRule(tasks), id(id){};
+    int id;;
     Task* Find();
+
+public:
+    ByID(vector<Task*> tasks, int id) : BaseRule(tasks), id(id){}
 };
 
 

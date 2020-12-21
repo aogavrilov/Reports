@@ -15,7 +15,7 @@ public:
     CompanyWorkers()= default;
     Worker* AddWorker(string name);
     Worker* ChangeWorkersBoss(Worker* worker, Worker* boss);
-
+    Worker* FindWorkerByName(string name);
 };
 
 

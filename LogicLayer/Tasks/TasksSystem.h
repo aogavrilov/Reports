@@ -7,16 +7,17 @@
 
 
 #include "Task.h"
+#include "FindingRules/BaseRule.h"
 
 class TasksSystem {
     vector<Task*> tasks;
 
 
 public:
-    Task* CreateTask();
-    Task* EditTaskStatus();
-    vector<Task*> WorkerTasks();
-    Task* FindTask();
+    Task* CreateTask(string name, string description, Worker* worker);
+    Task* EditTaskStatus(Task* task, TaskStatus newStatus);
+    Task* WorkerTask(Worker* worker);
+    Task* FindTask(BaseRule* rule);
 
 };
 

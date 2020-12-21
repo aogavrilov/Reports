@@ -7,7 +7,6 @@
 
 #include <string>
 #include "../Tasks/Task.h"
-
 using namespace std;
 
 class DailyReport {

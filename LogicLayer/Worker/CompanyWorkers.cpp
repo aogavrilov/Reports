@@ -16,3 +16,10 @@ Worker* CompanyWorkers::ChangeWorkersBoss(Worker* worker, Worker* boss) {
     return worker;
 }
 
+Worker *CompanyWorkers::FindWorkerByName(string name) {
+    for(auto worker : workers){
+        if(worker->name == name)
+            return worker;
+    }
+}
+

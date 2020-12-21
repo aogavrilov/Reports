@@ -6,8 +6,10 @@
 #define REPORTS_BASERULE_H
 #include "../Task.h"
 
-class BaseRule {
-    Task* Find();;
+class BaseRule { ;
+public:
+    Task* Find();
+
 protected:
     BaseRule(vector<Task*> tasks) : tasks(tasks){}
 

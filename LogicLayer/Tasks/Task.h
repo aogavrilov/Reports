@@ -14,21 +14,22 @@ using namespace std;
 class Task {
 
     string description;
-    Worker* worker;
-    TaskStatus statusOfProcessing;
-    vector<Comment*> comments;
     string dateOfEditing;
 
 
 public:
     int id;
     string name;
+    TaskStatus statusOfProcessing;
     Task(string name, string description, Worker* worker) : name(name), description(description),
-        worker(worker), dateOfCreating(GetTime()){};
+        worker(worker), dateOfCreating(GetTime()), statusOfProcessing(OPEN){};
     Comment* AddComment(Worker* worker, string comment);
     void ChangeStatusOfProcessing(TaskStatus statusOfProcessing);
-
+    void ChangeWorker(Worker* worker){this->worker = worker;};
     string dateOfCreating;
+    Worker* worker;
+    vector<Comment*> comments;
+
 };
 
 

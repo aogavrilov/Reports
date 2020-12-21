@@ -6,8 +6,12 @@
 #define REPORTS_BYUSER_H
 
 
-class ByUser {
+#include "BaseRule.h"
 
+class ByUser : BaseRule{
+    Worker* worker;
+    ByUser(vector<Task*> tasks, Worker* worker) : BaseRule(tasks), worker(worker){};
+    Task* Find();
 };
 
 

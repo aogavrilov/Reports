@@ -9,16 +9,17 @@
 #include <vector>
 
 using namespace std;
-#include "../Report/DailyReport.h"
+class DailyReport;
 class Worker {
-    string name;
     Worker* boss;
     vector<Worker*> subordinates;
 public:
     Worker(string name) : name(name){};
     Worker* SetBoss(Worker* boss);
+    Worker* GetBoss(){return boss;};
     Worker* SetSubordinates(vector<Worker*> subordinates);
-    DailyReport* report = new DailyReport();
+    //DailyReport* report = new DailyReport()
+    string name;
 };
 
 
